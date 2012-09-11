@@ -27,9 +27,6 @@ def extractURL(url):
 
 # the main function
 def main():
-#	scrap('http://localhost/za')
-#	print htmlSource
-#	find('http', htmlSource)	
 	extractURL('http://localhost/za')	
 
 # standard boilerplate to call the main() function.
