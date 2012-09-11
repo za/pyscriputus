@@ -15,14 +15,23 @@ def extractURL(url):
 	
 #	dict={'URL':'status'}
 	
-	for u in url: 
-		print u
+	#for u in url: 
+	#	print u
 
-#	dict = {'URL':'code'}	
+	dict = {'URL':'code'}	
 	for u in url: 
 		status = urllib.urlopen(u)
 		code = status.getcode()
-		print code	
+		print u, code	
+
+	#dict = {'url': 'code'}
+	
+#	for u in url: 
+#		status = urllib.urlopen(u)
+#		code = status.getcode()
+#		dict['u'] = 'code'
+#
+#	print dict
 
 def scrap(url): 
 	sock = urllib.urlopen(url)
