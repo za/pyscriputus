@@ -17,9 +17,12 @@ def extractURL(url):
 	
 	for u in url: 
 		print u
-#		dict["u"]= u.urllib.getcode()	
 
-#	print dict
+#	dict = {'URL':'code'}	
+	for u in url: 
+		status = urllib.urlopen(u)
+		code = status.getcode()
+		print code	
 
 def scrap(url): 
 	sock = urllib.urlopen(url)
