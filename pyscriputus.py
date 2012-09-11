@@ -9,9 +9,17 @@ def extractURL(url):
 	sock = urllib.urlopen(url)
 	source = sock.read()
 	sock.close()
+
+	# how to store in a variable? tuple? dictionary? 	
+	url = re.findall(r'http://\w+.\w+', source)
 	
-	url = re.findall(r'<a href=http://.+</a>', source)
-	print url
+#	dict={'URL':'status'}
+	
+	for u in url: 
+		print u
+#		dict["u"]= u.urllib.getcode()	
+
+#	print dict
 
 def scrap(url): 
 	sock = urllib.urlopen(url)
