@@ -13,39 +13,17 @@ def extractURL(url):
 	# how to store in a variable? tuple? dictionary? 	
 	url = re.findall(r'http://\w+.\w+', source)
 	
-#	dict={'URL':'status'}
-	
-	#for u in url: 
-	#	print u
-
 	dict = {'URL':'code'}	
 	for u in url: 
 		status = urllib.urlopen(u)
 		code = status.getcode()
 		print u, code	
 
-	#dict = {'url': 'code'}
-	
-#	for u in url: 
-#		status = urllib.urlopen(u)
-#		code = status.getcode()
-#		dict['u'] = 'code'
-#
-#	print dict
-
-def scrap(url): 
-	sock = urllib.urlopen(url)
-	htmlSource = sock.read()
-	sock.close()
-	return htmlSource
-
-# the find function():
-def find(pat, text):
-	match = re.search(pat,text)
-	if match: 
-		print match.group()
-	else:
-		print 'not found'
+#def scrap(url): 
+#	sock = urllib.urlopen(url)
+#	htmlSource = sock.read()
+#	sock.close()
+#	return htmlSource
 
 # the main function
 def main():
